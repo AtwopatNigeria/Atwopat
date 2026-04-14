@@ -48,42 +48,10 @@ To become a member, fill out the registration form directly on the website.
 - Email: support.atwopat@gmail.com  
 - WhatsApp: +2348104282046  
 
----
 
-## 🌐 Live Website
 
-Once deployed, your site will be available at:
-https://yourusername.github.io/atwopat-website/⁠�
+## 🌐 Live Website 
 
----
-
-## 🚀 Deployment Guide (GitHub Pages)
-
-Follow these steps to host the website for free:
-
-### 1. Create Repository
-- Go to GitHub
-- Click **New Repository**
-- Name it: `atwopat-website`
-- Set to **Public**
-
-### 2. Upload Files
-- Upload your `index.html`
-
-### 3. Enable GitHub Pages
-- Go to **Settings → Pages**
-- Select:
-  - Source: `Deploy from branch`
-  - Branch: `main`
-
-### 4. Done 🎉
-Your site will go live in a few minutes.
-
----
-
-## ⚠️ Note
-
-- Ensure your Google Form is properly embedded using the iframe embed link.
 - This is a static website/Landing page (no backend yet).
 - Payment verification is not automated in this version.
 
