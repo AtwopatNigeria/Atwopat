@@ -13,24 +13,65 @@ body {
     color: #ffffff;
 }
 
+/* HERO HEADER (SaaS STYLE) */
 header {
-    background: #020617;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE LAYER */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('your-header-bg.jpg') center/cover no-repeat;
+    filter: brightness(0.35);
+    z-index: 0;
+}
+
+/* CONTENT LAYER */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+/* ANIMATED LOGO */
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInLogo 1.5s ease forwards;
+}
+
+@keyframes fadeInLogo {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header h1 {
-    font-size: 36px;
-    margin: 0;
+    font-size: 42px;
+    margin: 10px 0;
 }
 
 header p {
     font-size: 18px;
-    color: #ccc;
+    color: #d1d5db;
 }
 
+/* SECTIONS */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 900px;
     margin: auto;
 }
@@ -42,24 +83,54 @@ h2 {
 .card {
     background: #111827;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 22px;
     background: #00bfff;
     color: #000;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 12px;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    background: #00a6dd;
+}
+
+/* FLOATING APPLY BUTTON */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00bfff;
+    color: #000;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    animation: pulse 2s infinite;
+    z-index: 999;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: #020617;
     margin-top: 40px;
     font-size: 14px;
@@ -70,10 +141,22 @@ footer {
 <body>
 
 <header>
-    <h1>ATWOPAT NIGERIA</h1>
-    <p><b>ASSOCIATION OF TABLE WATER OPERATORS AND TECHNICIANS</b></p>
-    <p>Connecting Baggers, Operators and Technicians for Skill, Unity, and Strength</p>
-</header> 
+    <div class="hero-content">
+
+        <!-- LOGO (replace with your PNG) -->
+        <img src="your-logo.png" class="logo" alt="ATWOPAT Logo">
+
+        <h1>ATWOPAT NIGERIA</h1>
+        <p><b>ASSOCIATION OF TABLE WATER OPERATORS AND TECHNICIANS</b></p>
+        <p>Connecting Baggers, Operators and Technicians for Skill, Unity, and Strength</p>
+
+        <a class="btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
+            Apply Now
+        </a>
+
+    </div>
+</header>
+
 <section>
     <div class="card">
         <h2>About ATWOPAT</h2>
@@ -99,20 +182,15 @@ footer {
 <section>
     <div class="card">
         <h2>Registration</h2>
-
-        <p>
-        Please click the button below to complete your registration.  
-        Ensure your details are correct before submission.
-        </p>
-
+        <p>Please click below to complete your registration. Ensure your details are correct before submission.</p>
         <p><b>Application Fee: FREE</b></p>
 
-        <!-- REGISTER BUTTON ONLY -->
         <a class="btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
             Register Now
         </a>
     </div>
 </section>
+
 <section>
     <div class="card">
         <h2>Contact Us</h2>
@@ -121,9 +199,14 @@ footer {
     </div>
 </section>
 
+<!-- FLOATING BUTTON -->
+<a class="floating-btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
+    Apply Now
+</a>
+
 <footer>
     © 2026 ATWOPAT Nigeria. All Rights Reserved.
 </footer>
 
 </body>
-    </html>
+            </html>
