@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATWOPAT Nigeria</title>
 
-<!-- HANDWRITING FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
@@ -16,7 +15,6 @@ body {
     color: #ffffff;
 }
 
-/* HERO HEADER */
 header {
     position: relative;
     height: 90vh;
@@ -34,7 +32,6 @@ header::before {
     inset: 0;
     background: url('hero.jpg') center/cover no-repeat;
     filter: brightness(0.35);
-    z-index: 0;
 }
 
 .hero-content {
@@ -43,39 +40,26 @@ header::before {
     max-width: 900px;
 }
 
-/* LOGO */
 .logo {
     width: 120px;
     margin-bottom: 10px;
-    opacity: 0;
-    transform: translateY(-20px);
     animation: fadeInLogo 1.5s ease forwards;
 }
 
 @keyframes fadeInLogo {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from {opacity:0; transform:translateY(-20px);}
+    to {opacity:1; transform:translateY(0);}
 }
 
-/* HEADER TEXT */
 header h1 {
     font-size: 42px;
-    margin: 10px 0;
     font-weight: 800;
 }
 
 header p {
-    font-size: 18px;
     color: #d1d5db;
 }
 
-header p b {
-    font-weight: 700;
-}
-
-/* SECTIONS */
 section {
     padding: 20px 15px;
     max-width: 900px;
@@ -86,21 +70,16 @@ section + section {
     margin-top: -10px;
 }
 
-/* HANDWRITING TITLES */
 h2 {
     color: #00bfff;
     font-family: 'Pacifico', cursive;
-    font-weight: normal;
 }
 
-/* 🔥 GLASS EFFECT CARD */
 .card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-radius: 15px;
     padding: 20px;
-    margin-top: 10px;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     transition: 0.3s;
@@ -110,7 +89,6 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* BUTTON */
 .btn {
     display: block;
     width: 100%;
@@ -121,15 +99,20 @@ h2 {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    margin-top: 15px;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
-.btn:hover {
-    transform: scale(1.03);
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
 }
 
-/* FLOATING BUTTON */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .floating-btn {
     position: fixed;
     bottom: 20px;
@@ -140,36 +123,17 @@ h2 {
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     animation: pulse 2s infinite;
-    z-index: 999;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
     50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
 }
 
-/* 🔥 SCROLL ANIMATION */
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-    margin-top: 20px;
-    font-size: 14px;
 }
 </style>
 </head>
@@ -178,71 +142,113 @@ footer {
 
 <header>
     <div class="hero-content">
-
-        <img src="logo-removebg-preview.png" class="logo" alt="ATWOPAT Logo">
-
+        <img src="logo.png" class="logo">
         <h1>ATWOPAT NIGERIA</h1>
         <p><b>ASSOCIATION OF TABLE WATER OPERATORS AND TECHNICIANS</b></p>
-        <p>Connecting Baggers, Operators and Technicians for Skill, Unity, and Strength</p>
-
+        <p>Connecting professionals for skill, unity, and growth</p>
     </div>
 </header>
 
 <section class="hidden">
-    <div class="card">
-        <h2>About ATWOPAT</h2>
-        <p>
-        ATWOPAT is the official association for table water operators and technicians. Our mission is to promote professional skill development, encourage collaboration, and create a strong network for everyone in the industry.
-        </p>
-    </div>
+<div class="card">
+<h2>Membership Registration</h2>
+<p>
+You are about to join ATWOPAT — a professional network bringing together skilled individuals in water packaging and production.
+</p>
+<p>
+We connect sachet water baggers, operators, technicians, and experts to promote collaboration, knowledge sharing, and growth.
+</p>
+</div>
 </section>
 
 <section class="hidden">
-    <div class="card">
-        <h2>Why Join ATWOPAT?</h2>
-        <ul>
-            <li>Skill development workshops and training</li>
-            <li>Networking opportunities</li>
-            <li>Industry events and discussions</li>
-            <li>Professional recognition</li>
-            <li>Contribution to industry growth</li>
-        </ul>
-    </div>
+<div class="card">
+<h2>About Us</h2>
+<p>
+ATWOPAT is a national professional body uniting individuals across Nigeria’s water packaging industry.
+</p>
+
+<ul>
+<li>Water treatment & RO systems</li>
+<li>Sachet water machines</li>
+<li>Dispenser packaging machines</li>
+<li>Monoblock filling machines</li>
+<li>PET blowing machines</li>
+<li>Shrink wrapping & sealing machines</li>
+</ul>
+
+<p>
+We provide a platform for collaboration, technical exchange, and industry advancement.
+</p>
+</div>
 </section>
 
 <section class="hidden">
-    <div class="card">
-        <h2>Registration</h2>
-        <p>Please click below to complete your registration. Ensure your details are correct before submission.</p>
-        <p><b>Application Fee: FREE</b></p>
-
-        <a class="btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
-            Apply Now
-        </a>
-    </div>
+<div class="card">
+<h2>Core Purpose</h2>
+<ul>
+<li>Unite operators and technicians nationwide</li>
+<li>Share job opportunities and empowerment</li>
+<li>Promote training and skill development</li>
+<li>Support troubleshooting and knowledge exchange</li>
+<li>Advocate for welfare and fair compensation</li>
+<li>Encourage safety and best practices</li>
+</ul>
+</div>
 </section>
 
 <section class="hidden">
-    <div class="card">
-        <h2>For Enquiries/Support, Contact Us</h2>
-        <p>Email: support.atwopat@gmail.com</p>
-        <p>WhatsApp/Phone: +2348104282046 | +2349152072500 | +2348165033745</p>
-    </div>
+<div class="card">
+<h2>Code of Conduct</h2>
+<p>
+ATWOPAT is built on discipline, respect, and professionalism. Members must uphold standards to maintain credibility and integrity.
+</p>
+</div>
+</section>
+
+<section class="hidden">
+<div class="card">
+<h2>Disclaimer</h2>
+<p>
+ATWOPAT is an independent professional association and not a government body.
+</p>
+</div>
+</section>
+
+<section class="hidden">
+<div class="card">
+<h2>Registration</h2>
+<p>Click below to complete your registration.</p>
+
+<a class="btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
+Apply Now
+</a>
+</div>
+</section>
+
+<section class="hidden">
+<div class="card">
+<h2>Contact / Support</h2>
+
+<a class="btn" href="#">Telegram</a>
+<a class="btn" href="#">WhatsApp</a>
+<a class="btn" href="mailto:support.atwopat@gmail.com">Email</a>
+
+</div>
 </section>
 
 <a class="floating-btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
-    Apply Now
+Apply Now
 </a>
 
 <footer>
-    © 2026 ATWOPAT Nigeria. All Rights Reserved.
+© 2026 ATWOPAT Nigeria
 </footer>
 
-<!-- 🔥 SCROLL SCRIPT -->
 <script>
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
             entry.target.classList.add('show');
         }
     });
