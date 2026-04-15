@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATWOPAT Nigeria</title>
 
+<!-- HANDWRITING FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0a0f1c;
+    background: linear-gradient(135deg, #0a0f1c, #020617);
     color: #ffffff;
 }
 
-/* HERO HEADER (SaaS STYLE) */
+/* HERO HEADER */
 header {
     position: relative;
     height: 90vh;
@@ -25,7 +28,6 @@ header {
     overflow: hidden;
 }
 
-/* BACKGROUND IMAGE LAYER */
 header::before {
     content: "";
     position: absolute;
@@ -35,18 +37,16 @@ header::before {
     z-index: 0;
 }
 
-/* CONTENT LAYER */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 900px;
 }
 
-/* ANIMATED LOGO */
+/* LOGO */
 .logo {
     width: 120px;
-    height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInLogo 1.5s ease forwards;
@@ -59,9 +59,11 @@ header::before {
     }
 }
 
+/* HEADER TEXT */
 header h1 {
     font-size: 42px;
     margin: 10px 0;
+    font-weight: 800;
 }
 
 header p {
@@ -69,43 +71,65 @@ header p {
     color: #d1d5db;
 }
 
+header p b {
+    font-weight: 700;
+}
+
 /* SECTIONS */
 section {
-    padding: 50px 20px;
+    padding: 20px 15px;
     max-width: 900px;
     margin: auto;
 }
 
+section + section {
+    margin-top: -10px;
+}
+
+/* HANDWRITING TITLES */
 h2 {
     color: #00bfff;
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
 }
 
+/* 🔥 GLASS EFFECT CARD */
 .card {
-    background: #111827;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* BUTTON */
 .btn {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #00bfff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background: linear-gradient(135deg, #00bfff, #00e0ff);
     color: #000;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-top: 12px;
+    margin-top: 15px;
     transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    background: #00a6dd;
+    transform: scale(1.03);
 }
 
-/* FLOATING APPLY BUTTON */
+/* FLOATING BUTTON */
 .floating-btn {
     position: fixed;
     bottom: 20px;
@@ -127,12 +151,24 @@ h2 {
     100% { transform: scale(1); }
 }
 
+/* 🔥 SCROLL ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     background: #020617;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 14px;
 }
 </style>
@@ -143,19 +179,16 @@ footer {
 <header>
     <div class="hero-content">
 
-        <!-- LOGO (replace with your PNG) -->
         <img src="logo.png" class="logo" alt="ATWOPAT Logo">
 
         <h1>ATWOPAT NIGERIA</h1>
         <p><b>ASSOCIATION OF TABLE WATER OPERATORS AND TECHNICIANS</b></p>
         <p>Connecting Baggers, Operators and Technicians for Skill, Unity, and Strength</p>
-        
-        </a>
 
     </div>
 </header>
 
-<section>
+<section class="hidden">
     <div class="card">
         <h2>About ATWOPAT</h2>
         <p>
@@ -164,7 +197,7 @@ footer {
     </div>
 </section>
 
-<section>
+<section class="hidden">
     <div class="card">
         <h2>Why Join ATWOPAT?</h2>
         <ul>
@@ -177,7 +210,7 @@ footer {
     </div>
 </section>
 
-<section>
+<section class="hidden">
     <div class="card">
         <h2>Registration</h2>
         <p>Please click below to complete your registration. Ensure your details are correct before submission.</p>
@@ -189,15 +222,14 @@ footer {
     </div>
 </section>
 
-<section>
+<section class="hidden">
     <div class="card">
-        <h2>For Enquires/Support, Contact Us</h2>
+        <h2>For Enquiries/Support, Contact Us</h2>
         <p>Email: support.atwopat@gmail.com</p>
         <p>WhatsApp/Phone: +2348104282046 | +2349152072500 | +2348165033745</p>
     </div>
 </section>
 
-<!-- FLOATING BUTTON -->
 <a class="floating-btn" href="https://forms.gle/1vgZAR94SVp6f2rH7" target="_blank">
     Apply Now
 </a>
@@ -206,5 +238,18 @@ footer {
     © 2026 ATWOPAT Nigeria. All Rights Reserved.
 </footer>
 
+<!-- 🔥 SCROLL SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
+
 </body>
-            </html>
+    </html>
