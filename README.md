@@ -39,7 +39,7 @@ By joining ATWOPAT, you become part of a community that values growth, learning,
 
 To become a member, fill out the registration form directly on the website.
 
-👉 Application Fee: **₦2000 (Non-refundable)**
+👉 Application Fee: **NGN1,500 (Non-refundable)**
 
 ---
 
