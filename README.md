@@ -45,7 +45,7 @@ To become a member, fill out the registration form directly on the website.
 
 ## 📬 Contact
 
-- Email: support.atwopat@gmail.com  
+- Email: info@atwopat.org.ng 
 - WhatsApp: +2348104282046  
 
 
